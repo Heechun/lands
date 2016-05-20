@@ -37,20 +37,21 @@ return result;
 </head>
 <body>
 <body onkeydown="return keydowncheck();">
+<%@ include file="header.jsp" %>
 
 <%-- <h1><center><font color="red">ㅎ1000 아 데이터 베이스를 확인해 보렴</font></center></h1> --%>
 	<input type="hidden" id="title" value="${article.title}">
 
-	<c:if test="${id!=null}">
-		<%@include file = "loginOk.jsp" %>
-	</c:if>
+<%-- 	<c:if test="${id!=null}"> --%>
+<%-- 		<%@include file = "loginOk.jsp" %> --%>
+<%-- 	</c:if> --%>
 	
-<!-- 	id값이 null이면 로그인창이 뜨게 한다 -->
+<!--  	id값이 null이면 로그인창이 뜨게 한다 --> 
 
-	<c:if test="${id==null}">
-		<%@include file = "login.jsp" %>
+<%-- 	<c:if test="${id==null}"> --%>
+<%-- 		<%@include file = "login.jsp" %> --%>
 
-	</c:if>
+<%-- 	</c:if> --%>
 
 <center><img src ="resources/main.gif"  width="400" height="200" title="YANG BONO" ></center>
 

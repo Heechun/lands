@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+              "http://mybatis.org/dtd/mybatis-3-mapper.dtd"> 
+
+
+
+
+<mapper namespace="com.pknu.member.dao.MemberDao">
+	<insert id="joinMember" parameterType="memberDto">
+		INSERT INTO LOGIN
+		VALUES(#{id}, #{pass}, #{name}, member_seq.nextval, sysdate)
+	</insert>
+	
+
+	
+	<select id="selectId" parameterType="string" resultType="string">
+		SELECT ID 
+		FROM LOGIN
+		WHERE ID = #{inputId}
+	</select>
+</mapper>
